@@ -5,7 +5,7 @@ Resource        ${EXECDIR}/Resources/Common/Android_config.robot
 Test Teardown   Teardown test
 Test Setup      Android_config.Open the Apps   
 
-Force Tags      testReg
+Force Tags      test
 
 *** Test Cases ***
 User successfull register app
