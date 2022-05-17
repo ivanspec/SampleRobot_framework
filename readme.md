@@ -4,4 +4,7 @@ RobotFramework mobile automation
 - Install RobotFramework
 - Install AppiumLibrary
 
-robot -d results -i Smoke Tests/Tags.robo
+Running : 
+```bash
+$ robot -d results -i Smoke Tests/Tags.robo
+```
