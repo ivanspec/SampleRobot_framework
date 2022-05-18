@@ -6,5 +6,5 @@ RobotFramework mobile automation
 
 Running : 
 ```bash
-$ robot -d results -i Smoke Tests/Tags.robo
+$ robot -d results -i Smoke Tests/Step
 ```
