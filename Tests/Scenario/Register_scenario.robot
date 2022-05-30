@@ -9,6 +9,7 @@ Force Tags      testReg
 
 *** Test Cases ***
 User successfull register app
+  [Tags]    test_case_id=2   critical standard
   Given User open app
   When User fill username,password and re-password
   Then User sucessfull register

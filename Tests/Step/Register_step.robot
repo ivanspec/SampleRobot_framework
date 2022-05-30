@@ -8,10 +8,11 @@ User open app
 
 User fill username,password and re-password
     Tap loginMenu 
+    Click register
     Set text username 
     Set text password
     Set text Re-Password
-    Click loginBtn
+    Click signUpBtn
 
 User sucessfull register
     Assert alert title is "Signed Up!"
