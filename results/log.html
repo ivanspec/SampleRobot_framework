@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 4.1.3 (Python 3.9.10 on darwin)" name="Generator">
+<meta content="Robot Framework 5.0.1 (Python 3.10.4 on darwin)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all" type="text/css">
 /* Generic and misc styles */
@@ -318,6 +318,9 @@ th.stats-col-graph:hover {
     top: 0;
     padding: 3px;
     cursor: default;
+}
+.element-header .label {
+    margin-right: 0.5em;
 }
 .name {
     font-weight: bold;
@@ -966,6 +969,7 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
+        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
@@ -1350,8 +1354,8 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'VAR', 'IF', 'ELSE IF', 'ELSE'];
-    var MESSAGE_TYPE = 8;
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
+                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1372,10 +1376,10 @@ window.testdata = function () {
                 elapsed];
     }
     function createMessage(element, strings) {
-        return model.Message(LEVELS[element[2]],
-                             util.timestamp(element[1]),
-                             strings.get(element[3]),
-                             strings.get(element[4]));
+        return model.Message(LEVELS[element[1]],
+                             util.timestamp(element[0]),
+                             strings.get(element[2]),
+                             strings.get(element[3]));
     }
     function parseStatus(stats) {
         return STATUSES[stats[0]];
@@ -1386,7 +1390,7 @@ window.testdata = function () {
         };
     }
     function createBodyItem(parent, element, strings, index) {
-        if (element[0] == MESSAGE_TYPE)
+        if (element.length < 5)
             return createMessage(element, strings);
         var messages = util.filter(parent.children(), function (child) {
             return child.type == 'message';
@@ -1799,25 +1803,25 @@ function stopPropagation(event) {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[1,0,13477],[[4,5,6,0,[],[1,20,13456],[],[[7,0,0,[8],[1,144,13331],[[1,9,10,0,0,0,0,0,[1,145,6046],[[0,11,12,0,13,14,0,0,[1,145,1],[]],[0,11,12,0,13,15,0,0,[1,146,0],[]],[0,11,12,0,13,16,0,0,[1,146,1],[]],[0,11,12,0,13,17,0,0,[1,147,0],[]],[0,11,12,0,13,18,0,0,[1,148,0],[]],[0,11,12,0,13,19,0,0,[1,148,1],[]],[0,20,12,0,21,22,0,0,[1,149,1],[[8,150,2,23]]],[0,24,25,0,26,27,0,0,[1,150,6041],[]]]],[0,28,29,0,0,0,0,0,[1,6192,1],[[0,30,12,0,31,0,0,0,[1,6192,0],[]]]],[0,32,29,0,0,0,0,0,[1,6193,3829],[[0,33,34,0,0,0,0,0,[1,6193,1496],[[0,35,25,0,36,37,0,0,[1,6194,1380],[]],[0,38,25,0,39,37,0,0,[1,7574,115],[[8,7576,2,40]]]]],[0,41,34,0,0,0,0,0,[1,7689,970],[[0,35,25,0,36,42,0,0,[1,7690,893],[]],[0,43,25,0,44,45,0,0,[1,8583,76],[[8,8585,2,46]]]]],[0,47,34,0,0,0,0,0,[1,8659,684],[[0,43,25,0,44,48,0,0,[1,8660,683],[[8,8661,2,49]]]]],[0,50,34,0,0,0,0,0,[1,9343,679],[[0,38,25,0,39,51,0,0,[1,9344,678],[[8,9348,2,52]]]]]]],[0,53,29,0,0,0,0,0,[1,10023,2950],[[0,54,34,0,0,0,0,0,[1,10023,2789],[[0,35,25,0,36,55,0,0,[1,10024,2724],[]],[0,56,25,0,57,58,0,0,[1,12748,64],[[8,12751,2,59]]]]],[0,60,34,0,0,0,0,0,[1,12812,63],[[0,56,25,0,57,61,0,0,[1,12813,62],[[8,12816,2,62]]]]],[0,63,34,0,0,0,0,0,[1,12875,98],[[0,38,25,0,39,64,0,0,[1,12876,97],[[8,12880,2,65]]]]]]],[2,66,10,0,0,0,0,0,[1,12974,501],[[0,67,25,0,68,0,0,0,[1,12974,501],[]]]]]]],[],[1,1,0,0]]],[],[],[1,1,0,0]];
+window.output["suite"] = [1,2,3,0,[],[1,0,32185],[[4,5,6,0,[],[1,23,15126],[],[[7,0,8,[9,10],[1,236,14911],[[1,11,12,0,0,0,0,0,[1,237,6726],[[0,13,14,0,15,16,0,0,[1,237,1],[]],[0,13,14,0,15,17,0,0,[1,238,0],[]],[0,13,14,0,15,18,0,0,[1,238,1],[]],[0,13,14,0,15,19,0,0,[1,239,0],[]],[0,13,14,0,15,20,0,0,[1,239,1],[]],[0,13,14,0,15,21,0,0,[1,240,0],[]],[0,22,14,0,23,24,0,0,[1,240,1],[[241,2,25]]],[0,26,27,0,28,29,0,0,[1,241,6722],[]]]],[0,30,31,0,0,0,0,0,[1,6964,1],[[0,32,14,0,33,0,0,0,[1,6964,1],[]]]],[0,34,31,0,0,0,0,0,[1,6965,4468],[[0,35,36,0,0,0,0,0,[1,6966,1049],[[0,37,27,0,38,39,0,0,[1,6966,950],[]],[0,40,27,0,41,39,0,0,[1,7916,99],[[7920,2,42]]]]],[0,43,36,0,0,0,0,0,[1,8015,1732],[[0,37,27,0,38,44,0,0,[1,8016,945],[]],[0,45,27,0,46,47,0,0,[1,8962,785],[[8966,2,48]]]]],[0,49,36,0,0,0,0,0,[1,9747,815],[[0,45,27,0,46,50,0,0,[1,9748,814],[[9752,2,51]]]]],[0,52,36,0,0,0,0,0,[1,10563,870],[[0,40,27,0,41,53,0,0,[1,10564,868],[[10568,2,54]]]]]]],[0,55,31,0,0,0,0,0,[1,11433,3199],[[0,56,36,0,0,0,0,0,[1,11434,2329],[[0,37,27,0,38,57,0,0,[1,11435,2230],[]],[0,58,27,0,59,60,0,0,[1,13666,96],[[13670,2,61]]]]],[0,62,36,0,0,0,0,0,[1,13763,84],[[0,58,27,0,59,63,0,0,[1,13764,83],[[13767,2,64]]]]],[0,65,36,0,0,0,0,0,[1,13848,784],[[0,40,27,0,41,66,0,0,[1,13848,784],[[13853,2,67]]]]]]],[2,68,12,0,0,0,0,0,[1,14633,513],[[0,69,27,0,70,0,0,0,[1,14633,513],[]]]]]]],[],[1,1,0,0]],[71,72,73,0,[],[1,15150,17033],[],[[74,0,8,[9,75],[1,15166,17016],[[1,11,12,0,0,0,0,0,[1,15167,6197],[[0,13,14,0,15,16,0,0,[1,15167,1],[]],[0,13,14,0,15,17,0,0,[1,15168,1],[]],[0,13,14,0,15,18,0,0,[1,15169,0],[]],[0,13,14,0,15,19,0,0,[1,15169,1],[]],[0,13,14,0,15,20,0,0,[1,15171,0],[]],[0,13,14,0,15,21,0,0,[1,15171,1],[]],[0,22,14,0,23,24,0,0,[1,15172,0],[[15172,2,25]]],[0,26,27,0,28,29,0,0,[1,15173,6191],[]]]],[0,30,76,0,0,0,0,0,[1,21365,1],[[0,32,14,0,33,0,0,0,[1,21365,0],[]]]],[0,77,76,0,0,0,0,0,[1,21366,7152],[[0,35,36,0,0,0,0,0,[1,21366,1084],[[0,37,27,0,38,39,0,0,[1,21367,971],[]],[0,40,27,0,41,39,0,0,[1,22338,111],[[22342,2,42]]]]],[0,78,79,0,0,0,0,0,[1,22450,1144],[[0,37,27,0,38,80,0,0,[1,22451,752],[]],[0,40,27,0,41,80,0,0,[1,23203,390],[[23207,2,81]]]]],[0,43,36,0,0,0,0,0,[1,23594,1736],[[0,37,27,0,38,44,0,0,[1,23595,953],[]],[0,45,27,0,46,47,0,0,[1,24548,781],[[24553,2,48]]]]],[0,49,36,0,0,0,0,0,[1,25330,883],[[0,45,27,0,46,50,0,0,[1,25331,882],[[25335,2,51]]]]],[0,82,79,0,0,0,0,0,[1,26214,1372],[[0,45,27,0,46,83,0,0,[1,26215,1370],[[26219,2,84]]]]],[0,85,79,0,0,0,0,0,[1,27586,931],[[0,40,27,0,41,86,0,0,[1,27587,930],[[27591,2,87]]]]]]],[0,88,76,0,0,0,0,0,[1,28518,3181],[[0,89,36,0,0,0,0,0,[1,28518,2354],[[0,37,27,0,38,57,0,0,[1,28519,2250],[]],[0,58,27,0,59,60,0,0,[1,30769,103],[[30774,2,90]]]]],[0,91,36,0,0,0,0,0,[1,30873,76],[[0,58,27,0,59,63,0,0,[1,30873,75],[[30878,2,92]]]]],[0,65,36,0,0,0,0,0,[1,30949,750],[[0,40,27,0,41,66,0,0,[1,30949,750],[[30953,2,67]]]]]]],[2,68,12,0,0,0,0,0,[1,31700,482],[[0,69,27,0,70,0,0,0,[1,31701,480],[]]]]]]],[],[1,1,0,0]]],[],[],[2,2,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Scenario","*/Users/user7/Documents/git/Sample_Project/SampleRobot_framework/Tests/Scenario","*../Tests/Scenario","*Login scenario","*/Users/user7/Documents/git/Sample_Project/SampleRobot_framework/Tests/Scenario/Login_scenario.robot","*../Tests/Scenario/Login_scenario.robot","*User successfull login app","*test","*Open the Apps","*Android_config","*Log To Console","*BuiltIn","*<p>Logs the given message to the console.\x3c/p>","*', '","*Server, = ${APPIUM_SERVER}","*Device = ${ANDROID_DEV_NAME}","*OS_Device = ${ANDROID_PLAT_VER}","*PackageID = ${ANDROID_APP_PACKAGE}","*ActivityID = ${ANDROID_APP_ACTIVITY}","*Set Global Variable","*<p>Makes a variable available globally in all tests and suites.\x3c/p>","*${ANDROID_DEV_NAME}","*${ANDROID_DEV_NAME} = emulator-5554","*Open Application","*AppiumLibrary","eNq1UU1PwzAMvfMrrJ63RlxRFmmCKxoSJ07ISbw2InUiJ93+Pi3d1A3OXPzx/N6z4uhsDpm4AALTGTDnGBzWkBhqgi6ciGGfcxgHKCQnkhaeMaMNMdRABdJx1qzjDezZSwoekD2Ew/sG3iJhIXA9uS/QCL3Qcdf0tebypFQXaj/a1qVBLUbXZGOyasBSSZRPrihidZZpK3dbGZnnfKEuq7coXWkH35j/89YKjVbZPOiKNhLYJJ5k1zw2MyRz8Ebb6abzCbWyE3tCrvArcvsHfKHiJPwWqMXtYik0pEqfo8RV+kFlbe7+CFbevQ3GgDciTmt9O1pE6ueJ5htaB7wi","*${APPIUM_SERVER}, platformName=${ANDROID_PLAT_NAME}, appPackage=${ANDROID_APP_PACKAGE}, appActivity=${ANDROID_APP_ACTIVITY}, noReset=false, udid=${ANDROID_DEV_NAME}, automationName=uiautomator2","*Given User open app","*Login_step","*No Operation","*<p>Does absolutely nothing.\x3c/p>","*When User fill username and password","*Tap loginMenu","*Login_page","*Wait Until Element Is Visible","*<p>Waits until element specified with `locator` is visible.\x3c/p>","*${loginMenuBtn}","*Click Element","*<p>Click element identified by `locator`.\x3c/p>","*Clicking element 'android=new UiSelector().text(\"Login\").className(\"android.widget.TextView\")'.","*Set text username","*${loginEmail}","*Input Text","*<p>Types the given `text` into text field identified by `locator`.\x3c/p>","*${loginEmail}, test@kok.gitu","*Typing text 'test@kok.gitu' into text field 'accessibility_id=input-email'","*Set text password","*${loginPass}, 12341234","*Typing text '12341234' into text field 'accessibility_id=input-password'","*Click loginBtn","*${loginBtn}","*Clicking element 'accessibility_id=button-LOGIN'.","*Then User sucessfull login","*Assert alert title is &quot;Success&quot;","*${alertTitle}","*Element Text Should Be","*<p>Verifies element identified by <code>locator\x3c/code> exactly contains text <code>expected\x3c/code>.\x3c/p>","*${alertTitle}, ${expected_result}","*Verifying element 'id=android:id/alertTitle' contains exactly text 'Success'.","*Assert alert description is &quot;You are logged in!&quot;","*${alertMessage}, ${expected_result}","*Verifying element 'id=android:id/message' contains exactly text 'You are logged in!'.","*Close alertBtn","*${closeAlertBtn}","*Clicking element 'id=android:id/button1'.","*Teardown Test","*Close Application","*<p>Closes the current application and also close webdriver session.\x3c/p>"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Scenario","*/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario","*../Tests/Scenario","*Login scenario","*/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario/Login_scenario.robot","*../Tests/Scenario/Login_scenario.robot","*User successfull login app","*<p>Autotest documentation\x3c/p>","*results","*test_case_id=1","*Open the Apps","*Android_config","*Log To Console","*BuiltIn","*<p>Logs the given message to the console.\x3c/p>","*', '","*Server, = ${APPIUM_SERVER}","*Device = ${ANDROID_DEV_NAME}","*OS_Device = ${ANDROID_PLAT_VER}","*PackageID = ${ANDROID_APP_PACKAGE}","*ActivityID = ${ANDROID_APP_ACTIVITY}","*Set Global Variable","*<p>Makes a variable available globally in all tests and suites.\x3c/p>","*${ANDROID_DEV_NAME}","*${ANDROID_DEV_NAME} = ca2c9c52","*Open Application","*AppiumLibrary","eNq1UU1PwzAMvfMrrJ63RlxRFmmCKxoSJ07ISbw2InUiJ93+Pi3d1A3OXPzx/N6z4uhsDpm4AALTGTDnGBzWkBhqgi6ciGGfcxgHKCQnkhaeMaMNMdRABdJx1qzjDezZSwoekD2Ew/sG3iJhIXA9uS/QCL3Qcdf0tebypFQXaj/a1qVBLUbXZGOyasBSSZRPrihidZZpK3dbGZnnfKEuq7coXWkH35j/89YKjVbZPOiKNhLYJJ5k1zw2MyRz8Ebb6abzCbWyE3tCrvArcvsHfKHiJPwWqMXtYik0pEqfo8RV+kFlbe7+CFbevQ3GgDciTmt9O1pE6ueJ5htaB7wi","*${APPIUM_SERVER}, platformName=${ANDROID_PLAT_NAME}, appPackage=${ANDROID_APP_PACKAGE}, appActivity=${ANDROID_APP_ACTIVITY}, noReset=false, udid=${ANDROID_DEV_NAME}, automationName=uiautomator2","*Given User open app","*Login_step","*No Operation","*<p>Does absolutely nothing.\x3c/p>","*When User fill username and password","*Tap loginMenu","*Login_page","*Wait Until Element Is Visible","*<p>Waits until element specified with `locator` is visible.\x3c/p>","*${loginMenuBtn}","*Click Element","*<p>Click element identified by `locator`.\x3c/p>","*Clicking element 'android=new UiSelector().text(\"Login\").className(\"android.widget.TextView\")'.","*Set text username","*${loginEmail}","*Input Text","*<p>Types the given `text` into text field identified by `locator`.\x3c/p>","*${loginEmail}, test@kok.gitu","*Typing text 'test@kok.gitu' into text field 'accessibility_id=input-email'","*Set text password","*${loginPass}, 12341234","*Typing text '12341234' into text field 'accessibility_id=input-password'","*Click loginBtn","*${loginBtn}","*Clicking element 'accessibility_id=button-LOGIN'.","*Then User sucessfull login","*Assert alert title is &quot;Success&quot;","*${alertTitle}","*Element Text Should Be","*<p>Verifies element identified by <code>locator\x3c/code> exactly contains text <code>expected\x3c/code>.\x3c/p>","*${alertTitle}, ${expected_result}","*Verifying element 'id=android:id/alertTitle' contains exactly text 'Success'.","*Assert alert description is &quot;You are logged in!&quot;","*${alertMessage}, ${expected_result}","*Verifying element 'id=android:id/message' contains exactly text 'You are logged in!'.","*Close alertBtn","*${closeAlertBtn}","*Clicking element 'id=android:id/button1'.","*Teardown Test","*Close Application","*<p>Closes the current application and also close webdriver session.\x3c/p>","*Register scenario","*/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario/Register_scenario.robot","*../Tests/Scenario/Register_scenario.robot","*User successfull register app","*test_case_id=2","*Register_step","*When User fill username,password and re-password","*Click register","*Register_page","*${titleRegister}","*Clicking element 'xpath=//android.view.ViewGroup[@content-desc=\"button-sign-up-container\"]'.","*Set text re-password","*${registerRePassword}, 12341234","*Typing text '12341234' into text field 'accessibility_id=input-repeat-password'","*Click signUpBtn","*${signUpBtn}","*Clicking element 'xpath=//android.view.ViewGroup[@content-desc=\"button-SIGN UP\"]/android.view.ViewGroup/android.widget.TextView'.","*Then User sucessfull register","*Assert alert title is &quot;Signed Up!&quot;","*Verifying element 'id=android:id/alertTitle' contains exactly text 'Signed Up!'.","*Assert alert description is &quot;You successfully signed up!&quot;","*Verifying element 'id=android:id/message' contains exactly text 'You successfully signed up!'."]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:13","fail":0,"label":"All Tests","pass":1,"skip":0}],[{"elapsed":"00:00:13","fail":0,"label":"test","pass":1,"skip":0}],[{"elapsed":"00:00:13","fail":0,"id":"s1","label":"Scenario","name":"Scenario","pass":1,"skip":0},{"elapsed":"00:00:13","fail":0,"id":"s1-s1","label":"Scenario.Login scenario","name":"Login scenario","pass":1,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:32","fail":0,"label":"All Tests","pass":2,"skip":0}],[{"elapsed":"00:00:32","fail":0,"label":"results","pass":2,"skip":0},{"elapsed":"00:00:15","fail":0,"label":"test_case_id=1","pass":1,"skip":0},{"elapsed":"00:00:17","fail":0,"label":"test_case_id=2","pass":1,"skip":0}],[{"elapsed":"00:00:32","fail":0,"id":"s1","label":"Scenario","name":"Scenario","pass":2,"skip":0},{"elapsed":"00:00:15","fail":0,"id":"s1-s1","label":"Scenario.Login scenario","name":"Login scenario","pass":1,"skip":0},{"elapsed":"00:00:17","fail":0,"id":"s1-s2","label":"Scenario.Register scenario","name":"Register scenario","pass":1,"skip":0}]];
 </script>
 <script type="text/javascript">
 window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1646651579560;
+window.output["baseMillis"] = 1653982139047;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 13496;
+window.output["generated"] = 32203;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -2123,7 +2127,7 @@ function addExecutionLog(main) {
     <div class="element-header closed" onclick="toggleKeyword('${id}')">
       <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
         <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
-        <span class="label keyword ${status.toLowerCase()}">${type}</span>
+        <span class="label ${status.toLowerCase()}">${type}</span>
         <span>{{html assign}}</span>
         <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
         <span class="arg">{{html arguments}}</span>
@@ -2131,7 +2135,7 @@ function addExecutionLog(main) {
       <div class="element-header-right" onclick="stopPropagation(event)">
         <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
         <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
-        <a class="link" title="Link to this keyword" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+        <a class="link" title="Link to this item" href="#${id}" onclick="makeElementVisible('${id}')"></a>
       </div>
       <div class="element-header-toggle" title="Toggle visibility"></div>
     </div>

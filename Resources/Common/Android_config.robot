@@ -5,8 +5,8 @@ Library  BuiltIn
 *** Variable ***
 ${APPIUM_SERVER}=  http://127.0.0.1:4723/wd/hub
 ${ANDROID_PLAT_NAME}=  Android
-${ANDROID_DEV_NAME}=  emulator-5554
-${ANDROID_udid}=  emulator-5554
+${ANDROID_DEV_NAME}=  ca2c9c52
+${ANDROID_udid}=  ca2c9c52
 ${ANDROID_PLAT_VER}=  11
 ${ANDROID_APP_PACKAGE}=  com.wdiodemoapp
 ${ANDROID_APP_ACTIVITY}=  com.wdiodemoapp.MainActivity

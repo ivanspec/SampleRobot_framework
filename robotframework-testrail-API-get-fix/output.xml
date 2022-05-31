@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220525 00:01:06.612" rpa="false" schemaversion="3">
-<suite id="s1" name="Scenario" source="C:\Users\Ivan\Documents\github\SampleRobot_framework\Tests\Scenario">
-<suite id="s1-s1" name="Login scenario" source="C:\Users\Ivan\Documents\github\SampleRobot_framework\Tests\Scenario\Login_scenario.robot">
-<test id="s1-s1-t1" name="User successfull login app" line="14">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on darwin)" generated="20220531 14:28:59.045" rpa="false" schemaversion="3">
+<suite id="s1" name="Scenario" source="/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario">
+<suite id="s1-s1" name="Login scenario" source="/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario/Login_scenario.robot">
+<test id="s1-s1-t1" name="User successfull login app" line="11">
 <kw name="Open the Apps" library="Android_config" type="SETUP">
 <kw name="Log To Console" library="BuiltIn">
 <arg>'</arg>
 <arg>'</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:06.775" endtime="20220525 00:01:06.775"/>
+<status status="PASS" starttime="20220531 14:28:59.284" endtime="20220531 14:28:59.285"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Server</arg>
 <arg>= ${APPIUM_SERVER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:06.775" endtime="20220525 00:01:06.775"/>
+<status status="PASS" starttime="20220531 14:28:59.285" endtime="20220531 14:28:59.285"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Device = ${ANDROID_DEV_NAME}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:06.775" endtime="20220525 00:01:06.776"/>
+<status status="PASS" starttime="20220531 14:28:59.285" endtime="20220531 14:28:59.286"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>OS_Device = ${ANDROID_PLAT_VER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:06.776" endtime="20220525 00:01:06.776"/>
+<status status="PASS" starttime="20220531 14:28:59.286" endtime="20220531 14:28:59.286"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>PackageID = ${ANDROID_APP_PACKAGE}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:06.776" endtime="20220525 00:01:06.776"/>
+<status status="PASS" starttime="20220531 14:28:59.286" endtime="20220531 14:28:59.287"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>ActivityID = ${ANDROID_APP_ACTIVITY}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:06.776" endtime="20220525 00:01:06.776"/>
+<status status="PASS" starttime="20220531 14:28:59.287" endtime="20220531 14:28:59.287"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${ANDROID_DEV_NAME}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220525 00:01:06.777" level="INFO">${ANDROID_DEV_NAME} = emulator-5554</msg>
-<status status="PASS" starttime="20220525 00:01:06.777" endtime="20220525 00:01:06.777"/>
+<msg timestamp="20220531 14:28:59.288" level="INFO">${ANDROID_DEV_NAME} = ca2c9c52</msg>
+<status status="PASS" starttime="20220531 14:28:59.287" endtime="20220531 14:28:59.288"/>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${APPIUM_SERVER}</arg>
@@ -56,159 +56,159 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220525 00:01:06.777" endtime="20220525 00:01:10.209"/>
+<status status="PASS" starttime="20220531 14:28:59.288" endtime="20220531 14:29:06.010"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:06.775" endtime="20220525 00:01:10.209"/>
+<status status="PASS" starttime="20220531 14:28:59.284" endtime="20220531 14:29:06.010"/>
 </kw>
 <kw name="Given User open app" library="Login_step">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="PASS" starttime="20220525 00:01:10.210" endtime="20220525 00:01:10.210"/>
+<status status="PASS" starttime="20220531 14:29:06.011" endtime="20220531 14:29:06.012"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:10.209" endtime="20220525 00:01:10.210"/>
+<status status="PASS" starttime="20220531 14:29:06.011" endtime="20220531 14:29:06.012"/>
 </kw>
 <kw name="When User fill username and password" library="Login_step">
 <kw name="Tap loginMenu" library="Login_page">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${loginMenuBtn}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220525 00:01:10.211" endtime="20220525 00:01:11.109"/>
+<status status="PASS" starttime="20220531 14:29:06.013" endtime="20220531 14:29:06.963"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${loginMenuBtn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:11.110" level="INFO">Clicking element 'android=new UiSelector().text("Login").className("android.widget.TextView")'.</msg>
-<status status="PASS" starttime="20220525 00:01:11.109" endtime="20220525 00:01:11.181"/>
+<msg timestamp="20220531 14:29:06.967" level="INFO">Clicking element 'android=new UiSelector().text("Login").className("android.widget.TextView")'.</msg>
+<status status="PASS" starttime="20220531 14:29:06.963" endtime="20220531 14:29:07.062"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:10.210" endtime="20220525 00:01:11.181"/>
+<status status="PASS" starttime="20220531 14:29:06.013" endtime="20220531 14:29:07.062"/>
 </kw>
 <kw name="Set text username" library="Login_page">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${loginEmail}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220525 00:01:11.181" endtime="20220525 00:01:11.885"/>
+<status status="PASS" starttime="20220531 14:29:07.063" endtime="20220531 14:29:08.008"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${loginEmail}</arg>
 <arg>test@kok.gitu</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:11.887" level="INFO">Typing text 'test@kok.gitu' into text field 'accessibility_id=input-email'</msg>
-<status status="PASS" starttime="20220525 00:01:11.886" endtime="20220525 00:01:11.931"/>
+<msg timestamp="20220531 14:29:08.013" level="INFO">Typing text 'test@kok.gitu' into text field 'accessibility_id=input-email'</msg>
+<status status="PASS" starttime="20220531 14:29:08.009" endtime="20220531 14:29:08.794"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:11.181" endtime="20220525 00:01:11.931"/>
+<status status="PASS" starttime="20220531 14:29:07.062" endtime="20220531 14:29:08.794"/>
 </kw>
 <kw name="Set text password" library="Login_page">
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${loginPass}</arg>
 <arg>12341234</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:11.932" level="INFO">Typing text '12341234' into text field 'accessibility_id=input-password'</msg>
-<status status="PASS" starttime="20220525 00:01:11.931" endtime="20220525 00:01:13.080"/>
+<msg timestamp="20220531 14:29:08.799" level="INFO">Typing text '12341234' into text field 'accessibility_id=input-password'</msg>
+<status status="PASS" starttime="20220531 14:29:08.795" endtime="20220531 14:29:09.609"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:11.931" endtime="20220525 00:01:13.081"/>
+<status status="PASS" starttime="20220531 14:29:08.794" endtime="20220531 14:29:09.609"/>
 </kw>
 <kw name="Click loginBtn" library="Login_page">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${loginBtn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:13.082" level="INFO">Clicking element 'accessibility_id=button-LOGIN'.</msg>
-<status status="PASS" starttime="20220525 00:01:13.081" endtime="20220525 00:01:13.712"/>
+<msg timestamp="20220531 14:29:09.615" level="INFO">Clicking element 'accessibility_id=button-LOGIN'.</msg>
+<status status="PASS" starttime="20220531 14:29:09.611" endtime="20220531 14:29:10.479"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:13.081" endtime="20220525 00:01:13.712"/>
+<status status="PASS" starttime="20220531 14:29:09.610" endtime="20220531 14:29:10.480"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:10.210" endtime="20220525 00:01:13.712"/>
+<status status="PASS" starttime="20220531 14:29:06.012" endtime="20220531 14:29:10.480"/>
 </kw>
 <kw name="Then User sucessfull login" library="Login_step">
 <kw name="Assert alert title is &quot;Success&quot;" library="Login_page" sourcename="Assert alert title is &quot;${expected_result}&quot;">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${alertTitle}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220525 00:01:13.713" endtime="20220525 00:01:15.876"/>
+<status status="PASS" starttime="20220531 14:29:10.482" endtime="20220531 14:29:12.712"/>
 </kw>
 <kw name="Element Text Should Be" library="AppiumLibrary">
 <arg>${alertTitle}</arg>
 <arg>${expected_result}</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20220525 00:01:15.878" level="INFO">Verifying element 'id=android:id/alertTitle' contains exactly text 'Success'.</msg>
-<status status="PASS" starttime="20220525 00:01:15.876" endtime="20220525 00:01:15.891"/>
+<msg timestamp="20220531 14:29:12.717" level="INFO">Verifying element 'id=android:id/alertTitle' contains exactly text 'Success'.</msg>
+<status status="PASS" starttime="20220531 14:29:12.713" endtime="20220531 14:29:12.809"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:13.713" endtime="20220525 00:01:15.891"/>
+<status status="PASS" starttime="20220531 14:29:10.481" endtime="20220531 14:29:12.810"/>
 </kw>
 <kw name="Assert alert description is &quot;You are logged in!&quot;" library="Login_page" sourcename="Assert alert description is &quot;${expected_result}&quot;">
 <kw name="Element Text Should Be" library="AppiumLibrary">
 <arg>${alertMessage}</arg>
 <arg>${expected_result}</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20220525 00:01:15.892" level="INFO">Verifying element 'id=android:id/message' contains exactly text 'You are logged in!'.</msg>
-<status status="PASS" starttime="20220525 00:01:15.891" endtime="20220525 00:01:15.905"/>
+<msg timestamp="20220531 14:29:12.814" level="INFO">Verifying element 'id=android:id/message' contains exactly text 'You are logged in!'.</msg>
+<status status="PASS" starttime="20220531 14:29:12.811" endtime="20220531 14:29:12.894"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:15.891" endtime="20220525 00:01:15.905"/>
+<status status="PASS" starttime="20220531 14:29:12.810" endtime="20220531 14:29:12.894"/>
 </kw>
 <kw name="Close alertBtn" library="Login_page">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${closeAlertBtn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:15.906" level="INFO">Clicking element 'id=android:id/button1'.</msg>
-<status status="PASS" starttime="20220525 00:01:15.905" endtime="20220525 00:01:15.946"/>
+<msg timestamp="20220531 14:29:12.900" level="INFO">Clicking element 'id=android:id/button1'.</msg>
+<status status="PASS" starttime="20220531 14:29:12.895" endtime="20220531 14:29:13.679"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:15.905" endtime="20220525 00:01:15.946"/>
+<status status="PASS" starttime="20220531 14:29:12.895" endtime="20220531 14:29:13.679"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:13.713" endtime="20220525 00:01:15.946"/>
+<status status="PASS" starttime="20220531 14:29:10.480" endtime="20220531 14:29:13.679"/>
 </kw>
 <kw name="Teardown Test" library="Android_config" type="TEARDOWN">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20220525 00:01:15.947" endtime="20220525 00:01:16.072"/>
+<status status="PASS" starttime="20220531 14:29:13.680" endtime="20220531 14:29:14.193"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:15.946" endtime="20220525 00:01:16.072"/>
+<status status="PASS" starttime="20220531 14:29:13.680" endtime="20220531 14:29:14.193"/>
 </kw>
-<tag>critical standard</tag>
-<tag>test</tag>
+<doc>Autotest documentation</doc>
+<tag>results</tag>
 <tag>test_case_id=1</tag>
-<status status="PASS" starttime="20220525 00:01:06.774" endtime="20220525 00:01:16.072"/>
+<status status="PASS" starttime="20220531 14:28:59.283" endtime="20220531 14:29:14.194"/>
 </test>
-<status status="PASS" starttime="20220525 00:01:06.627" endtime="20220525 00:01:16.073"/>
+<status status="PASS" starttime="20220531 14:28:59.070" endtime="20220531 14:29:14.196"/>
 </suite>
-<suite id="s1-s2" name="Register scenario" source="C:\Users\Ivan\Documents\github\SampleRobot_framework\Tests\Scenario\Register_scenario.robot">
-<test id="s1-s2-t1" name="User successfull register app" line="11">
+<suite id="s1-s2" name="Register scenario" source="/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario/Register_scenario.robot">
+<test id="s1-s2-t1" name="User successfull register app" line="9">
 <kw name="Open the Apps" library="Android_config" type="SETUP">
 <kw name="Log To Console" library="BuiltIn">
 <arg>'</arg>
 <arg>'</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:16.082" endtime="20220525 00:01:16.082"/>
+<status status="PASS" starttime="20220531 14:29:14.214" endtime="20220531 14:29:14.215"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Server</arg>
 <arg>= ${APPIUM_SERVER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:16.082" endtime="20220525 00:01:16.082"/>
+<status status="PASS" starttime="20220531 14:29:14.215" endtime="20220531 14:29:14.216"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Device = ${ANDROID_DEV_NAME}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:16.082" endtime="20220525 00:01:16.083"/>
+<status status="PASS" starttime="20220531 14:29:14.216" endtime="20220531 14:29:14.216"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>OS_Device = ${ANDROID_PLAT_VER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:16.083" endtime="20220525 00:01:16.083"/>
+<status status="PASS" starttime="20220531 14:29:14.216" endtime="20220531 14:29:14.217"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>PackageID = ${ANDROID_APP_PACKAGE}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:16.083" endtime="20220525 00:01:16.084"/>
+<status status="PASS" starttime="20220531 14:29:14.218" endtime="20220531 14:29:14.218"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>ActivityID = ${ANDROID_APP_ACTIVITY}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220525 00:01:16.084" endtime="20220525 00:01:16.084"/>
+<status status="PASS" starttime="20220531 14:29:14.218" endtime="20220531 14:29:14.219"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${ANDROID_DEV_NAME}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220525 00:01:16.084" level="INFO">${ANDROID_DEV_NAME} = emulator-5554</msg>
-<status status="PASS" starttime="20220525 00:01:16.084" endtime="20220525 00:01:16.084"/>
+<msg timestamp="20220531 14:29:14.219" level="INFO">${ANDROID_DEV_NAME} = ca2c9c52</msg>
+<status status="PASS" starttime="20220531 14:29:14.219" endtime="20220531 14:29:14.219"/>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${APPIUM_SERVER}</arg>
@@ -224,155 +224,153 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220525 00:01:16.084" endtime="20220525 00:01:19.555"/>
+<status status="PASS" starttime="20220531 14:29:14.220" endtime="20220531 14:29:20.411"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:16.082" endtime="20220525 00:01:19.555"/>
+<status status="PASS" starttime="20220531 14:29:14.214" endtime="20220531 14:29:20.411"/>
 </kw>
 <kw name="Given User open app" library="Register_step">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="PASS" starttime="20220525 00:01:19.556" endtime="20220525 00:01:19.556"/>
+<status status="PASS" starttime="20220531 14:29:20.412" endtime="20220531 14:29:20.412"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:19.555" endtime="20220525 00:01:19.556"/>
+<status status="PASS" starttime="20220531 14:29:20.412" endtime="20220531 14:29:20.413"/>
 </kw>
 <kw name="When User fill username,password and re-password" library="Register_step">
 <kw name="Tap loginMenu" library="Login_page">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${loginMenuBtn}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220525 00:01:19.556" endtime="20220525 00:01:20.425"/>
+<status status="PASS" starttime="20220531 14:29:20.414" endtime="20220531 14:29:21.385"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${loginMenuBtn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:20.427" level="INFO">Clicking element 'android=new UiSelector().text("Login").className("android.widget.TextView")'.</msg>
-<status status="PASS" starttime="20220525 00:01:20.426" endtime="20220525 00:01:20.497"/>
+<msg timestamp="20220531 14:29:21.389" level="INFO">Clicking element 'android=new UiSelector().text("Login").className("android.widget.TextView")'.</msg>
+<status status="PASS" starttime="20220531 14:29:21.385" endtime="20220531 14:29:21.496"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:19.556" endtime="20220525 00:01:20.497"/>
+<status status="PASS" starttime="20220531 14:29:20.413" endtime="20220531 14:29:21.497"/>
 </kw>
 <kw name="Click register" library="Register_page">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${titleRegister}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220525 00:01:20.498" endtime="20220525 00:01:21.206"/>
+<status status="PASS" starttime="20220531 14:29:21.498" endtime="20220531 14:29:22.250"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${titleRegister}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:21.207" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-sign-up-container"]'.</msg>
-<status status="PASS" starttime="20220525 00:01:21.206" endtime="20220525 00:01:21.279"/>
+<msg timestamp="20220531 14:29:22.254" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-sign-up-container"]'.</msg>
+<status status="PASS" starttime="20220531 14:29:22.250" endtime="20220531 14:29:22.640"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:20.497" endtime="20220525 00:01:21.279"/>
+<status status="PASS" starttime="20220531 14:29:21.497" endtime="20220531 14:29:22.641"/>
 </kw>
 <kw name="Set text username" library="Login_page">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${loginEmail}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220525 00:01:21.279" endtime="20220525 00:01:21.301"/>
+<status status="PASS" starttime="20220531 14:29:22.642" endtime="20220531 14:29:23.595"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${loginEmail}</arg>
 <arg>test@kok.gitu</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:21.302" level="INFO">Typing text 'test@kok.gitu' into text field 'accessibility_id=input-email'</msg>
-<status status="PASS" starttime="20220525 00:01:21.301" endtime="20220525 00:01:22.655"/>
+<msg timestamp="20220531 14:29:23.600" level="INFO">Typing text 'test@kok.gitu' into text field 'accessibility_id=input-email'</msg>
+<status status="PASS" starttime="20220531 14:29:23.595" endtime="20220531 14:29:24.376"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:21.279" endtime="20220525 00:01:22.655"/>
+<status status="PASS" starttime="20220531 14:29:22.641" endtime="20220531 14:29:24.377"/>
 </kw>
 <kw name="Set text password" library="Login_page">
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${loginPass}</arg>
 <arg>12341234</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:22.656" level="INFO">Typing text '12341234' into text field 'accessibility_id=input-password'</msg>
-<status status="PASS" starttime="20220525 00:01:22.655" endtime="20220525 00:01:23.779"/>
+<msg timestamp="20220531 14:29:24.382" level="INFO">Typing text '12341234' into text field 'accessibility_id=input-password'</msg>
+<status status="PASS" starttime="20220531 14:29:24.378" endtime="20220531 14:29:25.260"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:22.655" endtime="20220525 00:01:23.779"/>
+<status status="PASS" starttime="20220531 14:29:24.377" endtime="20220531 14:29:25.260"/>
 </kw>
 <kw name="Set text re-password" library="Register_page">
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${registerRePassword}</arg>
 <arg>12341234</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:23.781" level="INFO">Typing text '12341234' into text field 'accessibility_id=input-repeat-password'</msg>
-<status status="PASS" starttime="20220525 00:01:23.780" endtime="20220525 00:01:24.888"/>
+<msg timestamp="20220531 14:29:25.266" level="INFO">Typing text '12341234' into text field 'accessibility_id=input-repeat-password'</msg>
+<status status="PASS" starttime="20220531 14:29:25.262" endtime="20220531 14:29:26.632"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:23.780" endtime="20220525 00:01:24.888"/>
+<status status="PASS" starttime="20220531 14:29:25.261" endtime="20220531 14:29:26.633"/>
 </kw>
 <kw name="Click signUpBtn" library="Register_page">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${signUpBtn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:24.889" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup/android.widget.TextView'.</msg>
-<status status="PASS" starttime="20220525 00:01:24.888" endtime="20220525 00:01:25.567"/>
+<msg timestamp="20220531 14:29:26.638" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-SIGN UP"]/android.view.ViewGroup/android.widget.TextView'.</msg>
+<status status="PASS" starttime="20220531 14:29:26.634" endtime="20220531 14:29:27.564"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:24.888" endtime="20220525 00:01:25.567"/>
+<status status="PASS" starttime="20220531 14:29:26.633" endtime="20220531 14:29:27.564"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:19.556" endtime="20220525 00:01:25.567"/>
+<status status="PASS" starttime="20220531 14:29:20.413" endtime="20220531 14:29:27.565"/>
 </kw>
 <kw name="Then User sucessfull register" library="Register_step">
 <kw name="Assert alert title is &quot;Signed Up!&quot;" library="Login_page" sourcename="Assert alert title is &quot;${expected_result}&quot;">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${alertTitle}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220525 00:01:25.568" endtime="20220525 00:01:27.741"/>
+<status status="PASS" starttime="20220531 14:29:27.566" endtime="20220531 14:29:29.816"/>
 </kw>
 <kw name="Element Text Should Be" library="AppiumLibrary">
 <arg>${alertTitle}</arg>
 <arg>${expected_result}</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20220525 00:01:27.743" level="INFO">Verifying element 'id=android:id/alertTitle' contains exactly text 'Signed Up!'.</msg>
-<status status="PASS" starttime="20220525 00:01:27.741" endtime="20220525 00:01:27.756"/>
+<msg timestamp="20220531 14:29:29.821" level="INFO">Verifying element 'id=android:id/alertTitle' contains exactly text 'Signed Up!'.</msg>
+<status status="PASS" starttime="20220531 14:29:29.816" endtime="20220531 14:29:29.919"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:25.567" endtime="20220525 00:01:27.756"/>
+<status status="PASS" starttime="20220531 14:29:27.565" endtime="20220531 14:29:29.919"/>
 </kw>
 <kw name="Assert alert description is &quot;You successfully signed up!&quot;" library="Login_page" sourcename="Assert alert description is &quot;${expected_result}&quot;">
 <kw name="Element Text Should Be" library="AppiumLibrary">
 <arg>${alertMessage}</arg>
 <arg>${expected_result}</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20220525 00:01:27.758" level="INFO">Verifying element 'id=android:id/message' contains exactly text 'You successfully signed up!'.</msg>
-<status status="PASS" starttime="20220525 00:01:27.757" endtime="20220525 00:01:27.772"/>
+<msg timestamp="20220531 14:29:29.925" level="INFO">Verifying element 'id=android:id/message' contains exactly text 'You successfully signed up!'.</msg>
+<status status="PASS" starttime="20220531 14:29:29.920" endtime="20220531 14:29:29.995"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:27.756" endtime="20220525 00:01:27.772"/>
+<status status="PASS" starttime="20220531 14:29:29.920" endtime="20220531 14:29:29.996"/>
 </kw>
 <kw name="Close alertBtn" library="Login_page">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${closeAlertBtn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220525 00:01:27.773" level="INFO">Clicking element 'id=android:id/button1'.</msg>
-<status status="PASS" starttime="20220525 00:01:27.772" endtime="20220525 00:01:27.812"/>
+<msg timestamp="20220531 14:29:30.000" level="INFO">Clicking element 'id=android:id/button1'.</msg>
+<status status="PASS" starttime="20220531 14:29:29.996" endtime="20220531 14:29:30.746"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:27.772" endtime="20220525 00:01:27.812"/>
+<status status="PASS" starttime="20220531 14:29:29.996" endtime="20220531 14:29:30.746"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:25.567" endtime="20220525 00:01:27.813"/>
+<status status="PASS" starttime="20220531 14:29:27.565" endtime="20220531 14:29:30.746"/>
 </kw>
 <kw name="Teardown Test" library="Android_config" type="TEARDOWN">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20220525 00:01:27.813" endtime="20220525 00:01:27.932"/>
+<status status="PASS" starttime="20220531 14:29:30.748" endtime="20220531 14:29:31.228"/>
 </kw>
-<status status="PASS" starttime="20220525 00:01:27.813" endtime="20220525 00:01:27.932"/>
+<status status="PASS" starttime="20220531 14:29:30.747" endtime="20220531 14:29:31.229"/>
 </kw>
-<tag>critical standard</tag>
+<doc>Autotest documentation</doc>
+<tag>results</tag>
 <tag>test_case_id=2</tag>
-<tag>testReg</tag>
-<status status="PASS" starttime="20220525 00:01:16.081" endtime="20220525 00:01:27.932"/>
+<status status="PASS" starttime="20220531 14:29:14.213" endtime="20220531 14:29:31.229"/>
 </test>
-<status status="PASS" starttime="20220525 00:01:16.074" endtime="20220525 00:01:27.933"/>
+<status status="PASS" starttime="20220531 14:29:14.197" endtime="20220531 14:29:31.230"/>
 </suite>
-<status status="PASS" starttime="20220525 00:01:06.613" endtime="20220525 00:01:27.934"/>
+<status status="PASS" starttime="20220531 14:28:59.047" endtime="20220531 14:29:31.232"/>
 </suite>
 <statistics>
 <total>
 <stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">critical standard</stat>
-<stat pass="1" fail="0" skip="0">test</stat>
+<stat pass="2" fail="0" skip="0">results</stat>
 <stat pass="1" fail="0" skip="0">test_case_id=1</stat>
 <stat pass="1" fail="0" skip="0">test_case_id=2</stat>
-<stat pass="1" fail="0" skip="0">testReg</stat>
 </tag>
 <suite>
 <stat pass="2" fail="0" skip="0" id="s1" name="Scenario">Scenario</stat>
