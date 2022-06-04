@@ -8,7 +8,9 @@ Test Setup      Android_config.Open the Apps
 Force Tags      test
 
 *** Variables ***
-@{id}      test1@    test2@dispostable.com     test3@dispostable.com   
+@{id}      test1@    
+...     test2@dispostable.com
+...     test3@dispostable.com   
 
 *** Test Cases ***     
 User successfull login app

@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on darwin)" generated="20220604 16:51:35.431" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on darwin)" generated="20220604 17:09:27.620" rpa="false" schemaversion="3">
 <suite id="s1" name="Login scenario" source="/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario/Login_scenario.robot">
-<test id="s1-t1" name="User successfull login app" line="14">
+<test id="s1-t1" name="User successfull login app" line="16">
 <kw name="Open the Apps" library="Android_config" type="SETUP">
 <kw name="Log To Console" library="BuiltIn">
 <arg>'</arg>
 <arg>'</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220604 16:51:35.543" endtime="20220604 16:51:35.543"/>
+<status status="PASS" starttime="20220604 17:09:27.853" endtime="20220604 17:09:27.854"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Server</arg>
 <arg>= ${APPIUM_SERVER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220604 16:51:35.543" endtime="20220604 16:51:35.544"/>
+<status status="PASS" starttime="20220604 17:09:27.854" endtime="20220604 17:09:27.854"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Device = ${ANDROID_DEV_NAME}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220604 16:51:35.544" endtime="20220604 16:51:35.544"/>
+<status status="PASS" starttime="20220604 17:09:27.854" endtime="20220604 17:09:27.855"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>OS_Device = ${ANDROID_PLAT_VER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220604 16:51:35.545" endtime="20220604 16:51:35.545"/>
+<status status="PASS" starttime="20220604 17:09:27.855" endtime="20220604 17:09:27.855"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>PackageID = ${ANDROID_APP_PACKAGE}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220604 16:51:35.545" endtime="20220604 16:51:35.545"/>
+<status status="PASS" starttime="20220604 17:09:27.855" endtime="20220604 17:09:27.856"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>ActivityID = ${ANDROID_APP_ACTIVITY}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220604 16:51:35.546" endtime="20220604 16:51:35.546"/>
+<status status="PASS" starttime="20220604 17:09:27.856" endtime="20220604 17:09:27.856"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${ANDROID_DEV_NAME}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220604 16:51:35.546" level="INFO">${ANDROID_DEV_NAME} = 10.100.85.213:5555</msg>
-<status status="PASS" starttime="20220604 16:51:35.546" endtime="20220604 16:51:35.547"/>
+<msg timestamp="20220604 17:09:27.857" level="INFO">${ANDROID_DEV_NAME} = 10.100.85.213:5555</msg>
+<status status="PASS" starttime="20220604 17:09:27.856" endtime="20220604 17:09:27.857"/>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${APPIUM_SERVER}</arg>
@@ -55,16 +55,16 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220604 16:51:35.547" endtime="20220604 16:51:42.894"/>
+<status status="PASS" starttime="20220604 17:09:27.857" endtime="20220604 17:09:33.833"/>
 </kw>
-<status status="PASS" starttime="20220604 16:51:35.542" endtime="20220604 16:51:42.895"/>
+<status status="PASS" starttime="20220604 17:09:27.853" endtime="20220604 17:09:33.833"/>
 </kw>
 <kw name="Given User open app" library="Login_step">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="PASS" starttime="20220604 16:51:42.896" endtime="20220604 16:51:42.896"/>
+<status status="PASS" starttime="20220604 17:09:33.835" endtime="20220604 17:09:33.835"/>
 </kw>
-<status status="PASS" starttime="20220604 16:51:42.895" endtime="20220604 16:51:42.896"/>
+<status status="PASS" starttime="20220604 17:09:33.834" endtime="20220604 17:09:33.836"/>
 </kw>
 <for flavor="IN">
 <var>${userID}</var>
@@ -78,456 +78,104 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${userID}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220604 16:51:42.898" level="INFO">${userID} = test1@</msg>
-<status status="PASS" starttime="20220604 16:51:42.898" endtime="20220604 16:51:42.899"/>
+<msg timestamp="20220604 17:09:33.838" level="INFO">${userID} = test1@</msg>
+<status status="PASS" starttime="20220604 17:09:33.838" endtime="20220604 17:09:33.838"/>
 </kw>
 <kw name="Tap loginMenu" library="Login_page">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${loginMenuBtn}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220604 16:51:42.900" endtime="20220604 16:51:43.306"/>
+<status status="PASS" starttime="20220604 17:09:33.839" endtime="20220604 17:09:34.825"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${loginMenuBtn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220604 16:51:43.311" level="INFO">Clicking element 'android=new UiSelector().text("Login").className("android.widget.TextView")'.</msg>
-<status status="PASS" starttime="20220604 16:51:43.306" endtime="20220604 16:51:43.659"/>
+<msg timestamp="20220604 17:09:34.830" level="INFO">Clicking element 'android=new UiSelector().text("Login").className("android.widget.TextView")'.</msg>
+<status status="PASS" starttime="20220604 17:09:34.825" endtime="20220604 17:09:34.944"/>
 </kw>
-<status status="PASS" starttime="20220604 16:51:42.899" endtime="20220604 16:51:43.660"/>
+<status status="PASS" starttime="20220604 17:09:33.839" endtime="20220604 17:09:34.945"/>
 </kw>
 <kw name="Set text username" library="Login_page">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${loginEmail}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220604 16:51:43.661" endtime="20220604 16:51:44.500"/>
+<status status="PASS" starttime="20220604 17:09:34.946" endtime="20220604 17:09:35.744"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${loginEmail}</arg>
 <arg>${userID}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220604 16:51:44.505" level="INFO">Typing text 'test1@' into text field 'accessibility_id=input-email'</msg>
-<status status="PASS" starttime="20220604 16:51:44.501" endtime="20220604 16:51:45.654"/>
+<msg timestamp="20220604 17:09:35.749" level="INFO">Typing text 'test1@' into text field 'accessibility_id=input-email'</msg>
+<status status="PASS" starttime="20220604 17:09:35.744" endtime="20220604 17:09:36.428"/>
 </kw>
-<status status="PASS" starttime="20220604 16:51:43.660" endtime="20220604 16:51:45.655"/>
+<status status="PASS" starttime="20220604 17:09:34.945" endtime="20220604 17:09:36.429"/>
 </kw>
 <kw name="Set text password" library="Login_page">
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${loginPass}</arg>
 <arg>123qweasd123</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220604 16:51:45.657" level="INFO">Typing text '123qweasd123' into text field 'accessibility_id=input-password'</msg>
-<status status="PASS" starttime="20220604 16:51:45.655" endtime="20220604 16:51:47.009"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:45.655" endtime="20220604 16:51:47.009"/>
-</kw>
-<kw name="Click loginBtn" library="Login_page">
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${loginBtn}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220604 16:51:47.015" level="INFO">Clicking element 'accessibility_id=button-LOGIN'.</msg>
-<status status="PASS" starttime="20220604 16:51:47.010" endtime="20220604 16:51:47.697"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:47.010" endtime="20220604 16:51:47.697"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:42.897" endtime="20220604 16:51:47.698"/>
-</kw>
-<kw name="Then User sucessfull login" library="Login_step">
-<kw name="Assert alert title is &quot;Success&quot;" library="Login_page" sourcename="Assert alert title is &quot;${expected_result}&quot;">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${alertTitle}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<msg timestamp="20220604 16:51:53.675" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
-&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2146"&gt;
-  &lt;android.widget.FrameLayout index="0" package="com.wdiodemoapp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2146]" displayed="true"&gt;
-    &lt;android.widget.LinearLayout index="0" package="com.wdiodemoapp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2146]" displayed="true"&gt;
-      &lt;android.widget.FrameLayout index="0" package="com.wdiodemoapp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2146]" displayed="true"&gt;
-        &lt;android.widget.LinearLayout index="0" package="com.wdiodemoapp" class="android.widget.LinearLayout" text="" resource-id="com.wdiodemoapp:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2146]" displayed="true"&gt;
-          &lt;android.widget.FrameLayout index="0" package="com.wdiodemoapp" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2146]" displayed="true"&gt;
-            &lt;android.widget.FrameLayout index="0" package="com.wdiodemoapp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2146]" displayed="true"&gt;
-              &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2146]" displayed="true"&gt;
-                &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2104]" displayed="true"&gt;
-                  &lt;android.widget.FrameLayout index="0" package="com.wdiodemoapp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2104]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2104]" displayed="true"&gt;
-                      &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2104]" displayed="true"&gt;
-                        &lt;android.widget.ScrollView index="0" package="com.wdiodemoapp" class="android.widget.ScrollView" text="" content-desc="Login-screen" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,90][1080,2104]" displayed="true"&gt;
-                          &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,90][1080,1438]" displayed="true"&gt;
-                            &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[33,90][1047,1438]" displayed="true"&gt;
-                              &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[154,90][926,420]" displayed="true"&gt;
-                                &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="Login / Sign up Form" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[154,200][926,311]" displayed="true" /&gt;
-                              &lt;/android.view.ViewGroup&gt;
-                              &lt;android.view.ViewGroup index="1" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" content-desc="button-login-container" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[284,420][513,508]" displayed="true"&gt;
-                                &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[284,420][513,508]" displayed="true"&gt;
-                                  &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="Login" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[317,420][480,508]" displayed="true" /&gt;
-                                &lt;/android.view.ViewGroup&gt;
-                              &lt;/android.view.ViewGroup&gt;
-                              &lt;android.view.ViewGroup index="2" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" content-desc="button-sign-up-container" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[513,420][796,508]" displayed="true"&gt;
-                                &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[513,420][796,508]" displayed="true"&gt;
-                                  &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="Sign up" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[546,420][763,508]" displayed="true" /&gt;
-                                &lt;/android.view.ViewGroup&gt;
-                              &lt;/android.view.ViewGroup&gt;
-                              &lt;android.view.ViewGroup index="3" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[33,552][1047,1438]" displayed="true"&gt;
-                                &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[66,633][1014,749]" displayed="true"&gt;
-                                  &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#983536;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[66,662][121,719]" displayed="true" /&gt;
-                                  &lt;android.widget.EditText index="1" package="com.wdiodemoapp" class="android.widget.EditText" text="test1@" content-desc="input-email" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[152,633][1014,746]" displayed="true" /&gt;
-                                &lt;/android.view.ViewGroup&gt;
-                                &lt;android.widget.TextView index="1" package="com.wdiodemoapp" class="android.widget.TextView" text="Please enter a valid email address" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[77,759][1003,803]" displayed="true" /&gt;
-                                &lt;android.view.ViewGroup index="2" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[66,850][1014,965]" displayed="true"&gt;
-                                  &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#983873;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[66,879][121,936]" displayed="true" /&gt;
-                                  &lt;android.widget.EditText index="1" package="com.wdiodemoapp" class="android.widget.EditText" text="••••••••••••" content-desc="input-password" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="true" scrollable="false" selected="false" bounds="[152,850][1014,963]" displayed="true" /&gt;
-                                &lt;/android.view.ViewGroup&gt;
-                                &lt;android.widget.TextView index="3" package="com.wdiodemoapp" class="android.widget.TextView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[77,976][1003,1020]" displayed="true" /&gt;
-                                &lt;android.widget.TextView index="4" package="com.wdiodemoapp" class="android.widget.TextView" text="When the device has Touch/FaceID (iOS) or FingerPrint enabled a biometrics button will be shown to use and test the login." checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[49,1031][1032,1176]" displayed="true" /&gt;
-                                &lt;android.view.ViewGroup index="5" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" content-desc="button-biometric" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[287,1246][430,1356]" displayed="true"&gt;
-                                  &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[298,1257][419,1345]" displayed="true"&gt;
-                                    &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#983607;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[331,1271][386,1331]" displayed="true" /&gt;
-                                  &lt;/android.view.ViewGroup&gt;
-                                &lt;/android.view.ViewGroup&gt;
-                                &lt;android.view.ViewGroup index="6" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" content-desc="button-LOGIN" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[463,1246][793,1356]" displayed="true"&gt;
-                                  &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[474,1257][782,1345]" displayed="true"&gt;
-                                    &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="LOGIN" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[565,1271][691,1330]" displayed="true" /&gt;
-                                  &lt;/android.view.ViewGroup&gt;
-                                &lt;/android.view.ViewGroup&gt;
-                              &lt;/android.view.ViewGroup&gt;
-                              &lt;android.view.ViewGroup index="4" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[210,519][364,673]" displayed="true" /&gt;
-                            &lt;/android.view.ViewGroup&gt;
-                          &lt;/android.view.ViewGroup&gt;
-                        &lt;/android.widget.ScrollView&gt;
-                      &lt;/android.view.ViewGroup&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                  &lt;/android.widget.FrameLayout&gt;
-                &lt;/android.view.ViewGroup&gt;
-                &lt;android.view.ViewGroup index="2" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2104][1080,2146]" displayed="true"&gt;
-                  &lt;android.widget.Button index="0" package="com.wdiodemoapp" class="android.widget.Button" text="" content-desc="Home" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2126][180,2146]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2126][180,2146]" displayed="true"&gt;
-                      &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#984737;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[61,2126][119,2146]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                    &lt;android.widget.TextView index="2" package="com.wdiodemoapp" class="android.widget.TextView" text="Home" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[38,2172][143,2236]" displayed="true" /&gt;
-                  &lt;/android.widget.Button&gt;
-                  &lt;android.widget.Button index="1" package="com.wdiodemoapp" class="android.widget.Button" text="" content-desc="Webview" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[180,2126][360,2146]" displayed="true"&gt;
-                    &lt;android.widget.TextView index="1" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#984479;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[241,2126][299,2146]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="2" package="com.wdiodemoapp" class="android.widget.TextView" text="Webview" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[192,2172][348,2236]" displayed="true" /&gt;
-                  &lt;/android.widget.Button&gt;
-                  &lt;android.widget.Button index="2" package="com.wdiodemoapp" class="android.widget.Button" text="" content-desc="Login" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[360,2126][540,2146]" displayed="true"&gt;
-                    &lt;android.view.ViewGroup index="0" package="com.wdiodemoapp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[360,2126][540,2146]" displayed="true"&gt;
-                      &lt;android.widget.TextView index="0" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#983874;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[421,2126][479,2146]" displayed="true" /&gt;
-                    &lt;/android.view.ViewGroup&gt;
-                    &lt;android.widget.TextView index="2" package="com.wdiodemoapp" class="android.widget.TextView" text="Login" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[402,2172][498,2236]" displayed="true" /&gt;
-                  &lt;/android.widget.Button&gt;
-                  &lt;android.widget.Button index="3" package="com.wdiodemoapp" class="android.widget.Button" text="" content-desc="Forms" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[540,2126][720,2146]" displayed="true"&gt;
-                    &lt;android.widget.TextView index="1" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#984043;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[601,2126][659,2146]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="2" package="com.wdiodemoapp" class="android.widget.TextView" text="Forms" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[575,2172][686,2236]" displayed="true" /&gt;
-                  &lt;/android.widget.Button&gt;
-                  &lt;android.widget.Button index="4" package="com.wdiodemoapp" class="android.widget.Button" text="" content-desc="Swipe" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[720,2126][900,2146]" displayed="true"&gt;
-                    &lt;android.widget.TextView index="1" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#985404;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[781,2126][839,2146]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="2" package="com.wdiodemoapp" class="android.widget.TextView" text="Swipe" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[758,2172][862,2236]" displayed="true" /&gt;
-                  &lt;/android.widget.Button&gt;
-                  &lt;android.widget.Button index="5" package="com.wdiodemoapp" class="android.widget.Button" text="" content-desc="Drag" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[900,2126][1080,2146]" displayed="true"&gt;
-                    &lt;android.widget.TextView index="1" package="com.wdiodemoapp" class="android.widget.TextView" text="&amp;#983515;" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[961,2126][1019,2146]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="2" package="com.wdiodemoapp" class="android.widget.TextView" text="Drag" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[949,2172][1031,2236]" displayed="true" /&gt;
-                  &lt;/android.widget.Button&gt;
-                &lt;/android.view.ViewGroup&gt;
-              &lt;/android.view.ViewGroup&gt;
-            &lt;/android.widget.FrameLayout&gt;
-          &lt;/android.widget.FrameLayout&gt;
-        &lt;/android.widget.LinearLayout&gt;
-      &lt;/android.widget.FrameLayout&gt;
-    &lt;/android.widget.LinearLayout&gt;
-  &lt;/android.widget.FrameLayout&gt;
-&lt;/hierarchy&gt;</msg>
+<msg timestamp="20220604 17:09:36.434" level="INFO">Typing text '123qweasd123' into text field 'accessibility_id=input-password'</msg>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20220604 16:51:54.385" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220604 16:51:53.677" endtime="20220604 16:51:54.385"/>
+<status status="FAIL" starttime="20220604 17:09:37.719" endtime="20220604 17:09:37.720"/>
 </kw>
-<msg timestamp="20220604 16:51:54.386" level="FAIL">Element locator 'id=android:id/alertTitle' did not match any elements after 5 seconds</msg>
-<status status="FAIL" starttime="20220604 16:51:47.699" endtime="20220604 16:51:54.386"/>
+<msg timestamp="20220604 17:09:37.725" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" starttime="20220604 17:09:36.430" endtime="20220604 17:09:37.726"/>
 </kw>
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<arg>${alertTitle}</arg>
-<arg>${expected_result}</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="NOT RUN" starttime="20220604 16:51:54.387" endtime="20220604 16:51:54.387"/>
-</kw>
-<status status="FAIL" starttime="20220604 16:51:47.699" endtime="20220604 16:51:54.388"/>
-</kw>
-<kw name="Assert alert description is &quot;You are logged in!&quot;" library="Login_page" sourcename="Assert alert description is &quot;${expected_result}&quot;">
-<status status="NOT RUN" starttime="20220604 16:51:54.388" endtime="20220604 16:51:54.388"/>
-</kw>
-<kw name="Close alertBtn" library="Login_page">
-<status status="NOT RUN" starttime="20220604 16:51:54.389" endtime="20220604 16:51:54.389"/>
-</kw>
-<status status="FAIL" starttime="20220604 16:51:47.698" endtime="20220604 16:51:54.389"/>
-</kw>
-<status status="FAIL" starttime="20220604 16:51:42.897" endtime="20220604 16:51:54.389"/>
-</branch>
-<branch type="EXCEPT">
-<kw name="Log" library="BuiltIn">
-<arg>TestCase ${userID} ini error gan</arg>
-<arg>WARN</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220604 16:51:54.390" level="WARN">TestCase test1@ ini error gan</msg>
-<status status="PASS" starttime="20220604 16:51:54.390" endtime="20220604 16:51:54.390"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:54.390" endtime="20220604 16:51:54.390"/>
-</branch>
-<status status="PASS" starttime="20220604 16:51:42.897" endtime="20220604 16:51:54.390"/>
-</try>
-<status status="PASS" starttime="20220604 16:51:42.897" endtime="20220604 16:51:54.390"/>
-</iter>
-<iter>
-<var name="${userID}">test2@dispostable.com</var>
-<try>
-<branch type="TRY">
-<kw name="When User fill username and password" library="Login_step">
-<arg>${userID}</arg>
-<kw name="Set Test Variable" library="BuiltIn">
-<arg>${userID}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220604 16:51:54.392" level="INFO">${userID} = test2@dispostable.com</msg>
-<status status="PASS" starttime="20220604 16:51:54.392" endtime="20220604 16:51:54.392"/>
-</kw>
-<kw name="Tap loginMenu" library="Login_page">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${loginMenuBtn}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220604 16:51:54.393" endtime="20220604 16:51:54.672"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${loginMenuBtn}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220604 16:51:54.677" level="INFO">Clicking element 'android=new UiSelector().text("Login").className("android.widget.TextView")'.</msg>
-<status status="PASS" starttime="20220604 16:51:54.672" endtime="20220604 16:51:54.911"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:54.392" endtime="20220604 16:51:54.911"/>
-</kw>
-<kw name="Set text username" library="Login_page">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${loginEmail}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220604 16:51:54.912" endtime="20220604 16:51:55.076"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${loginEmail}</arg>
-<arg>${userID}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220604 16:51:55.081" level="INFO">Typing text 'test2@dispostable.com' into text field 'accessibility_id=input-email'</msg>
-<status status="PASS" starttime="20220604 16:51:55.076" endtime="20220604 16:51:56.013"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:54.912" endtime="20220604 16:51:56.013"/>
-</kw>
-<kw name="Set text password" library="Login_page">
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${loginPass}</arg>
-<arg>123qweasd123</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220604 16:51:56.018" level="INFO">Typing text '123qweasd123' into text field 'accessibility_id=input-password'</msg>
-<status status="PASS" starttime="20220604 16:51:56.014" endtime="20220604 16:51:57.343"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:56.014" endtime="20220604 16:51:57.344"/>
+<status status="FAIL" starttime="20220604 17:09:36.429" endtime="20220604 17:09:37.727"/>
 </kw>
 <kw name="Click loginBtn" library="Login_page">
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${loginBtn}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220604 16:51:57.349" level="INFO">Clicking element 'accessibility_id=button-LOGIN'.</msg>
-<status status="PASS" starttime="20220604 16:51:57.345" endtime="20220604 16:51:58.096"/>
+<status status="NOT RUN" starttime="20220604 17:09:37.727" endtime="20220604 17:09:37.727"/>
 </kw>
-<status status="PASS" starttime="20220604 16:51:57.344" endtime="20220604 16:51:58.097"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:54.391" endtime="20220604 16:51:58.097"/>
+<status status="FAIL" starttime="20220604 17:09:33.837" endtime="20220604 17:09:37.727"/>
 </kw>
 <kw name="Then User sucessfull login" library="Login_step">
-<kw name="Assert alert title is &quot;Success&quot;" library="Login_page" sourcename="Assert alert title is &quot;${expected_result}&quot;">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${alertTitle}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220604 16:51:58.098" endtime="20220604 16:52:01.351"/>
+<status status="NOT RUN" starttime="20220604 17:09:37.728" endtime="20220604 17:09:37.728"/>
 </kw>
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<arg>${alertTitle}</arg>
-<arg>${expected_result}</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20220604 16:52:01.355" level="INFO">Verifying element 'id=android:id/alertTitle' contains exactly text 'Success'.</msg>
-<status status="PASS" starttime="20220604 16:52:01.351" endtime="20220604 16:52:01.593"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:58.098" endtime="20220604 16:52:01.594"/>
-</kw>
-<kw name="Assert alert description is &quot;You are logged in!&quot;" library="Login_page" sourcename="Assert alert description is &quot;${expected_result}&quot;">
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<arg>${alertMessage}</arg>
-<arg>${expected_result}</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20220604 16:52:01.599" level="INFO">Verifying element 'id=android:id/message' contains exactly text 'You are logged in!'.</msg>
-<status status="PASS" starttime="20220604 16:52:01.595" endtime="20220604 16:52:02.242"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:01.594" endtime="20220604 16:52:02.243"/>
-</kw>
-<kw name="Close alertBtn" library="Login_page">
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${closeAlertBtn}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220604 16:52:02.248" level="INFO">Clicking element 'id=android:id/button1'.</msg>
-<status status="PASS" starttime="20220604 16:52:02.244" endtime="20220604 16:52:02.377"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:02.243" endtime="20220604 16:52:02.378"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:58.097" endtime="20220604 16:52:02.378"/>
-</kw>
-<status status="PASS" starttime="20220604 16:51:54.391" endtime="20220604 16:52:02.378"/>
+<status status="FAIL" starttime="20220604 17:09:33.837" endtime="20220604 17:09:37.728"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Log" library="BuiltIn">
 <arg>TestCase ${userID} ini error gan</arg>
 <arg>WARN</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220604 16:52:02.379" endtime="20220604 16:52:02.379"/>
+<status status="FAIL" starttime="20220604 17:09:37.728" endtime="20220604 17:09:37.729"/>
 </kw>
-<status status="NOT RUN" starttime="20220604 16:52:02.378" endtime="20220604 16:52:02.379"/>
+<status status="FAIL" starttime="20220604 17:09:37.728" endtime="20220604 17:09:37.729"/>
 </branch>
-<status status="PASS" starttime="20220604 16:51:54.391" endtime="20220604 16:52:02.379"/>
+<status status="FAIL" starttime="20220604 17:09:33.837" endtime="20220604 17:09:37.729"/>
 </try>
-<status status="PASS" starttime="20220604 16:51:54.391" endtime="20220604 16:52:02.379"/>
+<status status="FAIL" starttime="20220604 17:09:33.836" endtime="20220604 17:09:37.729"/>
 </iter>
-<iter>
-<var name="${userID}">test3@dispostable.com</var>
-<try>
-<branch type="TRY">
-<kw name="When User fill username and password" library="Login_step">
-<arg>${userID}</arg>
-<kw name="Set Test Variable" library="BuiltIn">
-<arg>${userID}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220604 16:52:02.382" level="INFO">${userID} = test3@dispostable.com</msg>
-<status status="PASS" starttime="20220604 16:52:02.381" endtime="20220604 16:52:02.382"/>
-</kw>
-<kw name="Tap loginMenu" library="Login_page">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${loginMenuBtn}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220604 16:52:02.382" endtime="20220604 16:52:03.332"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${loginMenuBtn}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220604 16:52:03.337" level="INFO">Clicking element 'android=new UiSelector().text("Login").className("android.widget.TextView")'.</msg>
-<status status="PASS" starttime="20220604 16:52:03.332" endtime="20220604 16:52:03.641"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:02.382" endtime="20220604 16:52:03.641"/>
-</kw>
-<kw name="Set text username" library="Login_page">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${loginEmail}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220604 16:52:03.642" endtime="20220604 16:52:03.848"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${loginEmail}</arg>
-<arg>${userID}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220604 16:52:03.854" level="INFO">Typing text 'test3@dispostable.com' into text field 'accessibility_id=input-email'</msg>
-<status status="PASS" starttime="20220604 16:52:03.849" endtime="20220604 16:52:04.085"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:03.641" endtime="20220604 16:52:04.085"/>
-</kw>
-<kw name="Set text password" library="Login_page">
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${loginPass}</arg>
-<arg>123qweasd123</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220604 16:52:04.091" level="INFO">Typing text '123qweasd123' into text field 'accessibility_id=input-password'</msg>
-<status status="PASS" starttime="20220604 16:52:04.086" endtime="20220604 16:52:05.864"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:04.085" endtime="20220604 16:52:05.864"/>
-</kw>
-<kw name="Click loginBtn" library="Login_page">
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${loginBtn}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220604 16:52:05.869" level="INFO">Clicking element 'accessibility_id=button-LOGIN'.</msg>
-<status status="PASS" starttime="20220604 16:52:05.865" endtime="20220604 16:52:06.780"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:05.864" endtime="20220604 16:52:06.780"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:02.380" endtime="20220604 16:52:06.781"/>
-</kw>
-<kw name="Then User sucessfull login" library="Login_step">
-<kw name="Assert alert title is &quot;Success&quot;" library="Login_page" sourcename="Assert alert title is &quot;${expected_result}&quot;">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${alertTitle}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220604 16:52:06.783" endtime="20220604 16:52:09.468"/>
-</kw>
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<arg>${alertTitle}</arg>
-<arg>${expected_result}</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20220604 16:52:09.473" level="INFO">Verifying element 'id=android:id/alertTitle' contains exactly text 'Success'.</msg>
-<status status="PASS" starttime="20220604 16:52:09.468" endtime="20220604 16:52:09.660"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:06.782" endtime="20220604 16:52:09.660"/>
-</kw>
-<kw name="Assert alert description is &quot;You are logged in!&quot;" library="Login_page" sourcename="Assert alert description is &quot;${expected_result}&quot;">
-<kw name="Element Text Should Be" library="AppiumLibrary">
-<arg>${alertMessage}</arg>
-<arg>${expected_result}</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<msg timestamp="20220604 16:52:09.666" level="INFO">Verifying element 'id=android:id/message' contains exactly text 'You are logged in!'.</msg>
-<status status="PASS" starttime="20220604 16:52:09.662" endtime="20220604 16:52:09.792"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:09.661" endtime="20220604 16:52:09.792"/>
-</kw>
-<kw name="Close alertBtn" library="Login_page">
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${closeAlertBtn}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220604 16:52:09.798" level="INFO">Clicking element 'id=android:id/button1'.</msg>
-<status status="PASS" starttime="20220604 16:52:09.794" endtime="20220604 16:52:10.000"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:09.793" endtime="20220604 16:52:10.000"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:06.781" endtime="20220604 16:52:10.001"/>
-</kw>
-<status status="PASS" starttime="20220604 16:52:02.380" endtime="20220604 16:52:10.001"/>
-</branch>
-<branch type="EXCEPT">
-<kw name="Log" library="BuiltIn">
-<arg>TestCase ${userID} ini error gan</arg>
-<arg>WARN</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220604 16:52:10.001" endtime="20220604 16:52:10.001"/>
-</kw>
-<status status="NOT RUN" starttime="20220604 16:52:10.001" endtime="20220604 16:52:10.002"/>
-</branch>
-<status status="PASS" starttime="20220604 16:52:02.380" endtime="20220604 16:52:10.002"/>
-</try>
-<status status="PASS" starttime="20220604 16:52:02.380" endtime="20220604 16:52:10.002"/>
-</iter>
-<status status="PASS" starttime="20220604 16:51:42.896" endtime="20220604 16:52:10.002"/>
+<status status="FAIL" starttime="20220604 17:09:33.836" endtime="20220604 17:09:37.729"/>
 </for>
 <kw name="Teardown Test" library="Android_config" type="TEARDOWN">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20220604 16:52:10.003" endtime="20220604 16:52:10.404"/>
+<status status="PASS" starttime="20220604 17:09:37.731" endtime="20220604 17:09:38.090"/>
 </kw>
-<status status="PASS" starttime="20220604 16:52:10.002" endtime="20220604 16:52:10.404"/>
+<status status="PASS" starttime="20220604 17:09:37.730" endtime="20220604 17:09:38.090"/>
 </kw>
 <tag>test</tag>
-<status status="PASS" starttime="20220604 16:51:35.541" endtime="20220604 16:52:10.405"/>
+<status status="FAIL" starttime="20220604 17:09:27.852" endtime="20220604 17:09:38.091">Execution terminated by signal</status>
 </test>
-<status status="PASS" starttime="20220604 16:51:35.433" endtime="20220604 16:52:10.407"/>
+<status status="FAIL" starttime="20220604 17:09:27.621" endtime="20220604 17:09:38.092"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">test</stat>
+<stat pass="0" fail="1" skip="0">test</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Login scenario">Login scenario</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login scenario">Login scenario</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220604 16:51:54.390" level="WARN">TestCase test1@ ini error gan</msg>
+<msg timestamp="20220604 17:09:27.622" level="ERROR">Error in file '/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario/Login_scenario.robot' on line 12: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220604 17:09:27.622" level="ERROR">Error in file '/Users/user7/Documents/git/SampleRobot_framework/Tests/Scenario/Login_scenario.robot' on line 13: Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220604 17:09:37.725" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 </errors>
 </robot>
