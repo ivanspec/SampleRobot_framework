@@ -6,6 +6,8 @@ User open app
     No operation
 
 User fill username and password
+    [Arguments]     ${userID}       
+    Set Test Variable           ${userID}
     Tap loginMenu
     Set text username 
     Set text password

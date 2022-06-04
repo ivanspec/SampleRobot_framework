@@ -7,8 +7,18 @@ Test Setup      Android_config.Open the Apps
 
 Force Tags      test
 
-*** Test Cases ***
+*** Variables ***
+@{id}      test1@    test2@dispostable.com     test3@dispostable.com   
+
+*** Test Cases ***     
 User successfull login app
   Given User open app
-  When User fill username and password
-  Then User sucessfull login
+  FOR    ${userID}     IN       @{id}
+    TRY
+      When User fill username and password      ${userID}
+      Then User sucessfull login
+    EXCEPT
+      LOG    TestCase ${userID} ini error gan       WARN
+    END
+  END
+

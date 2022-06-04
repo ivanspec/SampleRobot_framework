@@ -5,8 +5,8 @@ Library  BuiltIn
 *** Variable ***
 ${APPIUM_SERVER}=  http://127.0.0.1:4723/wd/hub
 ${ANDROID_PLAT_NAME}=  Android
-${ANDROID_DEV_NAME}=  emulator-5554
-${ANDROID_udid}=  emulator-5554
+${ANDROID_DEV_NAME}=  10.100.85.213:5555
+${ANDROID_udid}=  10.100.85.213:5555
 ${ANDROID_PLAT_VER}=  11
 ${ANDROID_APP_PACKAGE}=  com.wdiodemoapp
 ${ANDROID_APP_ACTIVITY}=  com.wdiodemoapp.MainActivity
@@ -34,3 +34,7 @@ Open the Apps
 
 Teardown Test
   Close Application
+
+Teardown Continue on failure
+  Run Keyword And Continue On Failure       FAIL        SampleTest
+  Log           Ini adalah test failure  

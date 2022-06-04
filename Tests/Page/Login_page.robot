@@ -14,10 +14,10 @@ Tap loginMenu
 
 Set text username 
     Wait Until Element Is Visible   ${loginEmail}
-    Input Text                      ${loginEmail}       test@kok.gitu
+    Input Text                      ${loginEmail}       ${userID}
 
 Set text password
-    Input Text                      ${loginPass}        12341234
+    Input Text                      ${loginPass}        123qweasd123
 
 Click loginBtn    
     Click Element                   ${loginBtn}
